@@ -1,0 +1,63 @@
+/* CSS do header de todas as páginas do site */
+
+.header {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Cor específica para sinalizar a guia aberta */
+.header-menu .home-color a {
+  color: #a03c2b;
+  font-weight: 700;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.header h1 {
+  font-weight: 300;
+  font-size: 4.5rem;
+}
+
+.header-menu a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  color: #141414;
+  display: block;
+}
+
+.header-menu a:hover {
+  background: #a03c2b;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Responsividade do header */
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+  .header a {
+    color: #000000;
+    border-radius: 8px;
+  }
+  .header-menu .home-color a {
+    background: #a03c2b;
+    color: #ffff;
+    font-weight: 700;
+  }
+}

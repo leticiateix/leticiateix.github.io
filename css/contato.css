@@ -1,0 +1,81 @@
+/* Formulário referente à aba contato */
+
+.formulario-container {
+  margin-top: -20px;
+  background: linear-gradient(rgba(255, 255, 255, 0.932),  rgba(117, 117, 117, 0.932), rgba(117, 117, 117, 0.932), rgba(255, 255, 255, 0.932));
+}
+
+.formulario-conteudo h2 {
+  text-align: left;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  color: #ffffff;
+}
+
+.formulario strong {
+  color: #f8dbd6;
+}
+
+.formulario input {
+  border: 1px solid #a03c2b;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.formulario textarea {
+  border: 1px solid #a03c2b;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.formulario input.formulario-submit {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background-color: #ce9a90;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.formulario input.formulario-submit:hover {
+  background-color: #bd786c;
+}
+
+.footer {
+  font-size: 1.125rem;
+  color: #505050;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 1rem;
+  color: #505050;
+  text-align: center;
+}
+
+/* Estilos para o conteúdo do formulário */
+.formulario-conteudo {
+  background-color: #651d18;
+  margin: 2.5% auto;
+  padding: 30px;
+  width: 50%;
+  max-width: 400px;
+  position: relative;
+  border-radius: 10px;
+}
+
+@media (max-width: 450px) {
+  .footer {
+    font-size: 0.9rem;
+  }
+}
