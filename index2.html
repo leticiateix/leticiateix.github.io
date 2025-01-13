@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre o seu notebook ideal aqui</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .question {
+            margin-bottom: 2rem;
+        }
+
+        .option {
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .option:hover {
+            background-color: #e9ecef;
+            border-color: #adb5bd;
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option.selected {
+            background-color: #d1e7dd;
+            border-color: #0f5132;
+        }
+
+        .option-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .btn-submit {
+            font-size: 0.9rem;
+            padding: 8px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 style="color: black"><strong>Qual notebook comprar?</strong></h2>
+        <h5>Responda o questionário abaixo e descubra o notebook ideal para você!</h5>
+        <form id="recommendationForm">
+            <div class="question">
+                <label for="preco" class="form-label"><h5 style="color: black;"><strong>1. Qual o seu orçamento?</strong></h5></label>
+                <!-- <div class="option" onclick="toggleOption(this)"> -->
+                <input type="number" id="preco" name="preco" class="form-control" required>
+            </div>
+
+            <div class="question">
+                <h5><strong>2. Qual a sua prioridade?</strong></h5>
+                <p style="color: red;">* Escolha até 2 opções</p>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">⚡</span>
+                    <input title="alto_desempenho" placeholder="Alto desempenho" type="checkbox" name="caracteristicas" value="velocidade_alta">
+                    Alto desempenho
+                </div>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">📂</span>
+                    <input title="alto_desempenho" placeholder="Alto armazenamento" type="checkbox" name="caracteristicas" value="armazenamento_alto">
+                    Muito espaço para fotos, vídeos e aplicativos
+                </div>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">🔋</span>
+                    <input title="alto_desempenho" placeholder="Bateria durável" type="checkbox" name="caracteristicas" value="bateria_duravel">
+                    Bateria que dure o dia todo
+                </div>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">📦</span>
+                    <input title="alto_desempenho" placeholder="Compacto" type="checkbox" name="caracteristicas" value="compacto">
+                    Peso (compacto)
+                </div>
+            </div>
+
+            <div class="question">
+                <h5><strong>3. Qual é o principal uso?</strong></h5>
+                <p style="color: red;">* Escolha 1 opção</p>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">🎮</span>
+                    <input title="jogos" placeholder="Jogos" type="checkbox" name="uso" value="jogos">
+                    Jogos
+                </div>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">📱</span>
+                    <input title="uso_basico" placeholder="Uso básico" type="checkbox" name="uso" value="uso_basico">
+                    Redes sociais, assistir vídeos, filmes e séries
+                </div>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">💼</span>
+                    <input title="uso_basico" placeholder="Uso básico" type="checkbox" name="uso" value="uso_basico">
+                    Trabalho e estudo
+                </div>
+                <div class="option" onclick="toggleOption(this)">
+                    <span class="option-icon">🎬</span>
+                    <input title="edicao" placeholder="Edição" type="checkbox" name="uso" value="edicao">
+                    Criar e editar vídeos ou fotos
+                </div>
+            </div>
+
+            <button type="button" onclick="submitForm()" class="btn btn-primary btn-sm btn-submit w-100">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="notebooks.js"></script>
+    <script src="recomendacoes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
