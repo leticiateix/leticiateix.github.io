@@ -106,6 +106,10 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" 
         ) {
             window.location.href = "grupo_4.html"
+        } else if (
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico" 
+        ) {
+            window.location.href = "grupo_4.html"
         }
 
     //orcamento_alto
@@ -125,13 +129,9 @@ function arvoreDeDecisao(respostas) {
         ) {
             window.location.href = "grupo_1.html"
         } 
-
-    } else {
-        console.log('Nenhum grupo atendido')
-        window.location.href = "grupo_4.html"
-    }
+    } 
     
-    // window.location.href = "grupo_4.html";
+    window.location.href = "grupo_4.html";
     
 }
 
