@@ -80,6 +80,8 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao"
         ) {
             window.location.href = "grupo_5.html"
+        } else {
+            window.location.href = "grupo_5.html"
         }
     
     //orcamento_medio
@@ -110,6 +112,8 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico" 
         ) {
             window.location.href = "grupo_4.html"
+        } else {
+            window.location.href = "grupo_4.html"
         }
 
     //orcamento_alto
@@ -119,6 +123,8 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos"
         ) {
             window.location.href = "grupo_3.html"
+        } else {
+            window.location.href = "grupo_1.html"
         }
     //orcamento_muito_alto
     } else if (preco >= 8001) {
@@ -128,10 +134,12 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "edicao"
         ) {
             window.location.href = "grupo_1.html"
-        } 
+        } else {
+            window.location.href = "grupo_1.html"
+        }
     } 
     
-    window.location.href = "grupo_4.html";
+    //window.location.href = "grupo_4.html";
     
 }
 
