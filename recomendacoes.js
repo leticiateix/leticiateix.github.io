@@ -86,7 +86,7 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
             caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "edicao"
         ) {
-            window.location.href = "grupo_2.html"
+            window.location.href = "grupo_4.html"
         } else if (
             caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "jogos" ||
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "jogos"  ||
@@ -95,7 +95,7 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
             caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "jogos"
         ) {
-            window.location.href = "grupo_2.html"
+            window.location.href = "grupo_4.html"
         } else {
             window.location.href = "grupo_5.html"
         }
