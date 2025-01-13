@@ -56,8 +56,6 @@ function submitForm() {
     arvoreDeDecisao(respostas)
 }
 
-
-
 function arvoreDeDecisao(respostas) {
     uso = respostas.uso
     preco = parseInt(respostas.preco)
@@ -105,10 +103,7 @@ function arvoreDeDecisao(respostas) {
             window.location.href = "grupo_3.html"
         //GRUPO 4
         } else if (
-            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" 
-        ) {
-            window.location.href = "grupo_4.html"
-        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" ||
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico" 
         ) {
             window.location.href = "grupo_4.html"
@@ -138,9 +133,7 @@ function arvoreDeDecisao(respostas) {
             window.location.href = "grupo_1.html"
         }
     } 
-    
     //window.location.href = "grupo_4.html";
-    
 }
 
 function ordenarPeloScore(array) {
