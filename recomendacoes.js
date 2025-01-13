@@ -67,17 +67,35 @@ function arvoreDeDecisao(respostas) {
 
     //orcamento_baixo
     if (preco < 3001) {
-        // GRUPO 2
-        if (
-            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "uso_basico"
-        ) {
-            window.location.href = "grupo_2.html"
         // GRUPO 5
-        } else if (
+        if (
             caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "uso_basico" ||
-            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao"
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "uso_basico" 
         ) {
             window.location.href = "grupo_5.html"
+        // GRUPO 2
+        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "edicao"
+        ) {
+            window.location.href = "grupo_2.html"
+        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "jogos" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "jogos"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "jogos"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "jogos"
+        ) {
+            window.location.href = "grupo_2.html"
         } else {
             window.location.href = "grupo_5.html"
         }
@@ -91,24 +109,40 @@ function arvoreDeDecisao(respostas) {
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "edicao" 
         ) {
             window.location.href = "grupo_1.html"
-        //GRUPO 2
-        } else if (
-            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "uso_basico"
-        ) {
-            window.location.href = "grupo_2.html"
         //GRUPO 3
         } else if (
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "jogos"  ||
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "jogos"
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "jogos"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos" 
         ) {
             window.location.href = "grupo_3.html"
         //GRUPO 4
         } else if (
-            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" ||
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico" 
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico"
         ) {
             window.location.href = "grupo_4.html"
+        //GRUPO 1
+        } else if (
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "edicao" 
+        ) {
+            window.location.href = "grupo_1.html"
+        //GRUPO 2
+        } else if (
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "uso_basico" 
+        ) {
+            window.location.href = "grupo_2.html"
+        //GRUPO 3
+        } else if (
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "jogos" 
+        ) {
+            window.location.href = "grupo_3.html"
         } else {
             window.location.href = "grupo_4.html"
         }
@@ -117,23 +151,65 @@ function arvoreDeDecisao(respostas) {
     } else if (preco < 8001) {
         //GRUPO 3
         if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "edicao"
+        ) {
+            window.location.href = "grupo_4.html"
+        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "jogos" ||
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "jogos"  ||
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "jogos"  ||
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos"
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "jogos"
         ) {
             window.location.href = "grupo_3.html"
+        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "uso_basico" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "uso_basico"
+        ) {
+            window.location.href = "grupo_4.html"
         } else {
-            window.location.href = "grupo_1.html"
+            window.location.href = "grupo_4.html"
         }
     //orcamento_muito_alto
     } else if (preco >= 8001) {
         //GRUPO 1
         if (
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel')  && uso == "edicao" ||
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "edicao" ||
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "edicao"
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "uso_basico" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "uso_basico"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "uso_basico" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "uso_basico"
         ) {
             window.location.href = "grupo_1.html"
+        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "edicao" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "edicao" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "edicao"
+        ) {
+            window.location.href = "grupo_1.html"
+        } else if (
+            caracteristicas.includes('bateria_duravel') && caracteristicas.includes('compacto') && uso == "jogos" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "jogos"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "jogos"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('armazenamento_alto') && caracteristicas.includes('compacto') && uso == "jogos"
+        ) {
+            window.location.href = "grupo_3.html"
         } else {
             window.location.href = "grupo_1.html"
         }
