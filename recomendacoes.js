@@ -25,11 +25,12 @@ function selectOption(element) {
 function submitForm() {
     const form = document.getElementById('recommendationForm');
 
-    const preco = form.querySelector('[name="preco"]').value;
+    const precoElement = form.querySelector('[name="preco"]:checked');
+    const preco = precoElement ? precoElement.value : null;
     const caracteristicas = Array.from(form.querySelectorAll('[name="caracteristicas"]:checked')).map(input => input.value);
     const uso = form.querySelector('[name="uso"]:checked')?.value;
 
-    
+
 
     if (!preco) {
         alert('Preencha o campo de preço!');
@@ -45,14 +46,13 @@ function submitForm() {
         alert('Selecione um uso principal do aparelho.');
         return;
     }
-    
+
     const respostas = {
         preco,
         caracteristicas,
         uso
     };
 
-    console.log(respostas)
     arvoreDeDecisao(respostas)
 }
 
