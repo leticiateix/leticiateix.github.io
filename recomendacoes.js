@@ -98,7 +98,9 @@ function arvoreDeDecisao(respostas) {
             window.location.href = "grupo_2.html"
         //GRUPO 3
         } else if (
-            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos"
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos" ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "edicao"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "edicao"
         ) {
             window.location.href = "grupo_3.html"
         //GRUPO 4
@@ -115,6 +117,8 @@ function arvoreDeDecisao(respostas) {
     } else if (preco < 8001) {
         //GRUPO 3
         if (
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('armazenamento_alto') && uso == "jogos"  ||
+            caracteristicas.includes('velocidade_alta') && caracteristicas.includes('compacto') && uso == "jogos"  ||
             caracteristicas.includes('velocidade_alta') && caracteristicas.includes('bateria_duravel') && uso == "jogos"
         ) {
             window.location.href = "grupo_3.html"
@@ -133,7 +137,9 @@ function arvoreDeDecisao(respostas) {
             window.location.href = "grupo_1.html"
         }
     } 
+    
     //window.location.href = "grupo_4.html";
+    
 }
 
 function ordenarPeloScore(array) {
